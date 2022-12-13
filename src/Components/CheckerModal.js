@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import Button from 'react-bootstrap/Button';
 
 const CheckerModal = ({
   currentQuestion,
