@@ -1,0 +1,9 @@
+Questions
+
+Question Types
+1. Who sings this song?
+2. Can you pick the top song for this artist? (Out of 5)
+3. What album is this image for?
+4. Which of these songs is not sung by this artist?
+5. Which song doesn't belong in this album?
+6. Which artist is more popular on Spotify?

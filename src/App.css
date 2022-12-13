@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#artistList {
+  list-style: none;
+  /* margin: 0; */
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  background-color: #1ed760;
+  margin: 3em 5em;
+}
+
+.buttonContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: #121212;
+  color: white;
+  border-radius: 20px;
+  padding: 1em 1em 2em 1em;
+}
+
+.question-container {
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 3px 5px 5px black;
+  background-color: #121212;
+}
+
+.question-text {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+}
+
+.fit-content {
+  max-width: fit-content;
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+}
+
+.choice-button {
+  min-width: min(15em, 20vw);
+  border-radius: 500px;
+  border: none;
+  font-weight: 600;
+  padding-inline: 32px;
+  padding-block: 8px;
+}
+
+.choice-button:hover {
+  transform: scale(1.05);
+}
+
+.title {
+  color: white;
+  font-weight: 700;
+}
