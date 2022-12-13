@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Spotify from 'spotify-web-api-js';
+import '../App.css';
 
 const Login = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -58,7 +59,9 @@ const Login = () => {
     <div className="App">
       <div>
         <a href="http://localhost:8888/">
-          <button type="button">Login with Spotify</button>
+          <button className="choice-button" type="button">
+            Login with Spotify
+          </button>
         </a>
       </div>
     </div>
