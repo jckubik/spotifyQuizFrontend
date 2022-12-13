@@ -58,7 +58,7 @@ const Login = () => {
   return (
     <div className="App">
       <div>
-        <a href="http://localhost:8888/">
+        <a href="https://spotifyquiz-authserver.netlify.app/">
           <button className="choice-button" type="button">
             Login with Spotify
           </button>
