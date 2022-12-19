@@ -7,9 +7,11 @@ const App = () => (
   <div>
     <h1 className="title">The Spotify Music Quiz</h1>
     <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/:auth" element={<Login />} />
+      <Route path="/" element={<Home />} />
+      {/* <Route path="/" element={<Login />} /> */}
+      {/* <Route path="/:auth" element={<Login />} /> */}
       <Route path="/home" element={<Home />} />
+      <Route path="*" element={<Home />} />
     </Routes>
   </div>
 );

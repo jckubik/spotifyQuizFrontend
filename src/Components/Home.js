@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
+import Spotify from 'spotify-web-api-js';
 import { grabRandomSongs, getArtists } from '../utils/gameLogic';
 import WhoSingsThis from './QuestionTypes/WhoSingsThis';
 import CheckerModal from './CheckerModal';
@@ -16,9 +17,27 @@ const Home = () => {
   const [correctAnswer, setCorrectAnswer] = useState();
   const [chosenAnswer, setChosenAnswer] = useState();
   const [correctArtistIndex, setCorrectArtistIndex] = useState();
+  const spotifyAPI = new Spotify();
+
+  // Grabs the current Top 50 USA songs
+  // Playlist id: 37i9dQZEVXbLp5XoPON0wI
+  async function getTop50() {
+    await spotifyAPI
+      .getPlaylist('37i9dQZEVXbLp5XoPON0wI', { fields: 'tracks.items.track' })
+      // Turn nested track objects into just array of track data
+      .then((result) =>
+        localStorage.setItem(
+          'top50',
+          JSON.stringify(result.tracks.items.map((obj) => obj.track))
+        )
+      );
+  }
 
   // Grab the top50 tracks on page load
   useEffect(() => {
+    if (!top50) {
+      getTop50();
+    }
     const tracks = localStorage.getItem('top50');
     setTop50(JSON.parse(tracks));
   }, []);
