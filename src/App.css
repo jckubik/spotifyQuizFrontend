@@ -87,6 +87,7 @@ body {
   padding-inline: 32px;
   padding-block: 8px;
   cursor: pointer;
+  color: #121212;
 }
 
 .choice-button:hover {
@@ -96,4 +97,14 @@ body {
 .title {
   color: white;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 480px) {
+  .choice-button {
+    font-size: 1.25rem;
+  }
+
+  body {
+    margin: 3em 1em;
+  }
 }
